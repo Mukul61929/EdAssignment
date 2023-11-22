@@ -1,17 +1,18 @@
 def my_str_check(s):
-    d={"UPPER_CASE":0,"LOWER_CASE":0} 
-    for each_char in s:
-        if each_char.isupper():
-           d["UPPER_CASE"]+=1
-        elif each_char.islower():
-           d["LOWER_CASE"]+=1
-        else:
-           pass
-    print("Original String : ", s)
-    print("-----------------------------------------------")
-    print("No. of Upper case characters : ",d["UPPER_CASE"])
-    print("-----------------------------------------------")
-    print("No. of Lower case Characters : ",d["LOWER_CASE"])
+    lower=0
+    upper=0
+    for i in s:
+	    if i.isupper():
+		        upper+=1
+	    elif i.islower():
+		        lower+=1
+    print(f"The given string is {s}")     
+    print("---------------------------------------------")
+    print("The number of uppercase characters is:",upper)
+    print("---------------------------------------------")
+    print("The number of lowercase characters is:",lower)
+    
+    
 
 my_str=("The quick Brow Fox")
 my_str_check(my_str)
